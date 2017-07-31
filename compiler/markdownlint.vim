@@ -14,11 +14,7 @@ endif
 CompilerSet errorformat=
         \%f:%l:\ %m,
         \%f:\ %m\ found\ on\ line\ %l
-if exists('g:markdownlint_compiler_options')
-        exe 'CompilerSet makeprg=mdl\ ' . g:markdownlint_compiler_options
-else
-        CompilerSet makeprg=mdl
-endif
+CompilerSet makeprg=mdl
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
